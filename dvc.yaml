@@ -1,0 +1,9 @@
+stages:
+  preprocess:
+    cmd: python scripts/preprocess.py data/zomato_df_final_data.csv 
+      outputs/clean/clean.csv
+    deps:
+    - data/zomato_df_final_data.csv
+    - scripts/preprocess.py
+    outs:
+    - outputs/clean/clean.csv
